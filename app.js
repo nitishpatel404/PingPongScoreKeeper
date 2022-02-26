@@ -23,9 +23,12 @@ function updateScores(player, opponent) {
             opponent.display.classList.add('has-text-danger');
             player.button.disabled = true;
             opponent.button.disabled = true;
-           
         }
         player.display.textContent = player.score;
+    }
+}
+
+
         if(p1.score===winningScore)
         {
             subtitle1.innerHTML="Hurrah! 😄 Player One Team Win the Game"
