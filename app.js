@@ -19,9 +19,13 @@ function updateScores(player, opponent) {
         player.score += 1;
         if (player.score === winningScore) {
             isGameOver = true;
+            player.display.classList.add('has-text-success');
+            opponent.display.classList.add('has-text-danger');
+            player.button.disabled = true;
             opponent.button.disabled = true;
            
         }
+        player.display.textContent = player.score;
         if(p1.score===winningScore)
         {
             subtitle1.innerHTML="Hurrah! 😄 Player One Team Win the Game"
@@ -30,7 +34,7 @@ function updateScores(player, opponent) {
         {
             subtitle1.innerHTML="Hurrah! 😄 Player Two Team Win the Game"
         }
-        player.display.textContent = player.score;
+        
     }
 }
 
