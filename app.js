@@ -23,21 +23,18 @@ function updateScores(player, opponent) {
             opponent.display.classList.add('has-text-danger');
             player.button.disabled = true;
             opponent.button.disabled = true;
+           
         }
-        player.display.textContent = player.score;
-    }
-}
-
-
         if(p1.score===winningScore)
         {
             subtitle1.innerHTML="Hurrah! 😄 Player One Team Win the Game"
+            p1Display.classList.add='winner'
         }
         if(p2.score===winningScore)
         {
             subtitle1.innerHTML="Hurrah! 😄 Player Two Team Win the Game"
         }
-        
+        player.display.textContent = player.score;
     }
 }
 
