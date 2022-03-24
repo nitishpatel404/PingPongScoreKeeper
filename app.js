@@ -20,21 +20,14 @@ function updateScores(player, opponent) {
         if (player.score === winningScore) {
             isGameOver = true;
             player.display.classList.add('has-text-success');
-            opponent.display.classList.add('has-text-danger');
+  opponent.display.classList.add('has-text-danger');
+  
             player.button.disabled = true;
             opponent.button.disabled = true;
-           
-        }
-        if(p1.score===winningScore)
-        {
-            subtitle1.innerHTML="Hurrah! 😄 Player One Team Win the Game"
-            p1Display.classList.add='winner'
-        }
-        if(p2.score===winningScore)
-        {
-            subtitle1.innerHTML="Hurrah! 😄 Player Two Team Win the Game"
         }
         player.display.textContent = player.score;
+        let wintext="Hurrah ! You Won the Game 😄";
+        
     }
 }
 
@@ -61,6 +54,6 @@ function reset() {
         p.display.textContent = 0;
         p.display.classList.remove('has-text-success', 'has-text-danger');
         p.button.disabled = false;
-        subtitle1.innerHTML="Use the buttons below to keep score"
+      
     }
 }
